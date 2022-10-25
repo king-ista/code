@@ -1,0 +1,21 @@
+h1{
+color:red;
+font-size: 30px;
+
+}
+/* #first-heading(id){
+    color:red; */
+/* .second-heading(class){
+    color:red; */
+   
+    /* c1.  :root {
+--text-color:red;
+h1{
+    color:var(--text-color);
+
+    }
+    c2.
+    h1{
+        --my-color:blue;
+        color:var(--my-color:blue);
+    } */

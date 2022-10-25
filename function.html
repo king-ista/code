@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: calc(100px+50px);
+            height: 100px;
+            background-color: rgb(75, 39, 39);
+        }
+        .box::after{
+            content: attr(data-title);
+
+        }
+        a::after{
+            content: "("attr(href)")";
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box" data-title="nội dung trong box"></div>
+    <h1>function</h1>
+<a href="https://www.facebook.com/">đăng nhập vào fb</a>
+
+    <ul>
+        <l1>var()</l1>
+        <l1>linear-gradient()</l1>
+        <l1>rgba()</l1>
+        <l1>rgb</l1>
+        <l1>calc</l1>
+        <l1>attr</l1>
+    </ul>
+</body>
+</html>

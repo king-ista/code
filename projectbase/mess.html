@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mess</title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+    <link rel="stylesheet" href="mess.css">
+</head>
+<body>
+    <div id="toast">
+        <div onclick="showSuccessToast();" class="toast toast__success">
+            <div onclick="showErrorToast();" class="toast toast__error"></div>
+        <div class="toast__icon">
+            <i class="fa-solid fa-circle-check"></i> 
+        </div>
+        <div class="toast__body">
+            <h3 class="toast__title">Success</h3>
+            <p class="toast__msg">may vi tinh ket noi window,linux,macbox</p>
+        </div>
+        <div class="toast__close">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div></div>
+    <div>
+    <!--Success-->
+<div class="toast toast__success">
+<div class="toast__icon">
+    <i class="fa-solid fa-circle-check"></i> 
+</div>
+<div class="toast__body">
+    <h3 class="toast__title">Success</h3>
+    <p class="toast__msg">may vi tinh ket noi window,linux,macbox</p>
+</div>
+<div class="toast__close">
+    <i class="fa-solid fa-circle-xmark"></i>
+</div>
+
+</div>
+
+</div>
+<!--info-->
+<div class="toast toast__info">
+<div class="toast__icon">
+    <i class="fa-solid fa-circle-check"></i> 
+</div>
+<div class="toast__body">
+    <h3 class="toast__title">info</h3>
+    <p class="toast__msg">may vi tinh ket noi window,linux,macbox</p>
+</div>
+<div class="toast__close">
+    <i class="fa-solid fa-circle-xmark"></i>
+</div>
+
+</div>
+<!--warning-->
+<div class="toast toast__warning">
+<div class="toast__icon">
+    <i class="fa-solid fa-circle-check"></i> 
+</div>
+<div class="toast__body">
+    <h3 class="toast__title">warning</h3>
+    <p class="toast__msg">may vi tinh ket noi window,linux,macbox</p>
+</div>
+<div class="toast__close">
+    <i class="fa-solid fa-circle-xmark"></i>
+</div>
+
+</div>
+<!--error-->
+<div class="toast toast__error">
+<div class="toast__icon">
+    <i class="fa-solid fa-circle-check"></i> 
+</div>
+<div class="toast__body">
+    <h3 class="toast__title">error</h3>
+    <p class="toast__msg">may vi tinh ket noi window,linux,macbox</p>
+</div>
+<div class="toast__close">
+    <i class="fa-solid fa-circle-xmark"></i>
+</div>
+<div class="btn btn--success">Show success toast</div>
+<div class="btn btn--danger">Show error toast</div>
+</div>
+<script>
+    //Toast funtion
+    function toast({title='',message='',type='info',duration=3000}){
+const main = document.getElementById('toast');
+if(main){
+    const toast = document.createElement('div');
+    const icon = {
+        success:'fas fa-circle-check',
+        info:'fas fa-info-check',
+        warning:' fas fa-excalamation-check',
+        error:'fas fa-excalamation-check',
+    }
+    const icon = icons[type];
+    const delay = (duration/1000).toFixed(2);
+    toast.classList.add('toast','toast--${type}');
+    toast.style.animation='slideInleft ease 0.3s,fakeOut linear 1s ${delay}s forwards';
+    toast.innerHTML = '<div class="toast__icon">'
+    <i class="fa-solid fa-circle-check"></i> 
+</div>
+<div class="toast__body">
+    <h3 class="toast__title">${title}</h3>
+    <p class="toast__msg">${message}</p>
+</div>
+<div class="toast__close">
+    <i class="fa-solid fa-circle-xmark"></i>
+</div>
+<div class="btn btn--success">Show success toast</div>
+<div class="btn btn--danger">Show error toast</div>
+</div>
+    ';
+    main.appendChild(toast);
+}setTimeout(function(){
+    main.removeChild(toast);
+})
+    }
+    toast({
+        
+    })
+    function showSuccessToast(){
+        title:'Thành công!',
+        message:'bạn đã đk thành công tài khoản tại f8.',
+        type:'success'
+        duration:5000/*ẩn 3000ms=3s*/ 
+    }
+function showErrorToast(){
+    title:'Thất bại!',
+        message:'có lỗi xảy ra, vui lòng liên hệ quản trị viên.',
+        type:'error'
+        duration:5000/*ẩn*/ 
+}
+</script>
+</body>
+    
+</html>
